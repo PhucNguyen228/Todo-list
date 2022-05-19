@@ -1,0 +1,50 @@
+server:
+  port: 8070
+spring:
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/app_ghichu?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    username: root
+    password: 
+  jpa:
+    properties:
+      hibernate.order_by.default_null_ordering: last
+      hibernate:
+        show_sql: true
+        format_sql: true
+        ddl-auto: create
+        dialect: org.hibernate.dialect.MySQL5Dialect       
+        temp:
+          use_jdbc_metadata_defaults: false
+  servlet:
+   multipart:
+    max-file-size: 50MB
+    max-request-size: 50MB
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+    ROOT: ERROR
+    org.springframework.web: ERROR
+    vn.tea: DEBUG
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+security:
+  token:
+    max-age-seconds: 604800 # 1 week
+    secret: bkr5aI5AAtS5kbwN
+    header: X-Token
+core:
+  attachment:
+    host:
+      #download: localhost:8080/core
+    path:
+      upload: /opt/uploads
+      uploadtemp: /opt/uploads/temp
+  
+scheduler:
+#    dongbocongtrinh: 0 0 21 * * ? # 21h mỗi ngày đồng bộ

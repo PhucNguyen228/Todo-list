@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "34a83336-96f3-47f8-a183-f99c19db2628",
+		"name": "TODO_JAVASCRIPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test api lưu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": null,\n    \"title\": \"test api 4\",\n    \"ghiChu\": \"test ddđ  ... \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/todo/ghichu/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo",
+						"ghichu",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test api danh sach",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/todo/ghichu/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo",
+						"ghichu",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test api lấy 1 phần tử",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/todo/ghichu/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo",
+						"ghichu",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test api  xóa dữ liệu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[2]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/todo/ghichu/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo",
+						"ghichu",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danh sach ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
